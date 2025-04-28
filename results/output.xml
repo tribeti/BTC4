@@ -1,125 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-04-28T15:28:00.185841" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-04-28T16:25:55.118743" rpa="false" schemaversion="5">
 <suite id="s1" name="BTC4" source="C:\BTVN\BTC4">
 <suite id="s1-s1" name="Main" source="C:\BTVN\BTC4\main.robot">
-<test id="s1-s1-t1" name="Vaild login" line="12">
+<test id="s1-s1-t1" name="Vaild login" line="13">
 <kw name="Mo trinh duyet">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-28T15:28:00.463319" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<msg time="2025-04-28T16:25:55.389603" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-28T15:28:00.462957" elapsed="25.982628"/>
+<status status="PASS" start="2025-04-28T16:25:55.389231" elapsed="25.813954"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-28T15:28:26.445984" elapsed="0.091996"/>
-</kw>
-<status status="PASS" start="2025-04-28T15:28:00.461990" elapsed="26.076496"/>
+<status status="PASS" start="2025-04-28T16:25:55.388188" elapsed="25.815231"/>
 </kw>
 <kw name="truy cap URL">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-04-28T15:28:26.539945" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<msg time="2025-04-28T16:26:21.204466" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-04-28T15:28:26.539684" elapsed="0.450670"/>
+<status status="PASS" start="2025-04-28T16:26:21.204243" elapsed="0.444495"/>
 </kw>
-<status status="PASS" start="2025-04-28T15:28:26.539091" elapsed="0.451482"/>
+<status status="PASS" start="2025-04-28T16:26:21.203825" elapsed="0.445131"/>
 </kw>
 <kw name="Dang nhap">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@name='username']</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-28T16:26:21.649845" elapsed="0.444026"/>
+</kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T15:28:26.992029" level="INFO">Typing text 'Admin' into text field 'xpath=//input[@name='username']'.</msg>
-<msg time="2025-04-28T15:28:27.130858" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-04-28T15:28:27.131316" level="FAIL">Element with locator 'xpath=//input[@name='username']' not found.</msg>
-<arg>xpath=//input[@name='username']</arg>
+<msg time="2025-04-28T16:26:22.094664" level="INFO">Typing text 'Admin' into text field 'xpath=//*[@name='username']'.</msg>
+<arg>xpath=//*[@name='username']</arg>
 <arg>${name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="FAIL" start="2025-04-28T15:28:26.991489" elapsed="0.143631">Element with locator 'xpath=//input[@name='username']' not found.</status>
+<status status="PASS" start="2025-04-28T16:26:22.094160" elapsed="0.084487"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<arg>xpath=//input[@name='password']</arg>
+<msg time="2025-04-28T16:26:22.179430" level="INFO">Typing text 'admin123' into text field 'xpath=//*[@name='password']'.</msg>
+<arg>xpath=//*[@name='password']</arg>
 <arg>${pass}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-04-28T15:28:27.135509" elapsed="0.000330"/>
+<status status="PASS" start="2025-04-28T16:26:22.178940" elapsed="0.060836"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<arg>class=oxd-button oxd-button--medium oxd-button--main orangehrm-login-button</arg>
+<msg time="2025-04-28T16:26:22.240380" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-04-28T15:28:27.136058" elapsed="0.000146"/>
+<status status="PASS" start="2025-04-28T16:26:22.239995" elapsed="0.040760"/>
 </kw>
-<status status="FAIL" start="2025-04-28T15:28:26.990943" elapsed="0.145447">Element with locator 'xpath=//input[@name='username']' not found.</status>
+<status status="PASS" start="2025-04-28T16:26:21.649422" elapsed="0.631488"/>
 </kw>
 <kw name="kiem tra dang nhap thanh cong">
-<status status="NOT RUN" start="2025-04-28T15:28:27.136805" elapsed="0.000232"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//h6[text()='Dashboard']</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-28T16:26:22.281690" elapsed="1.693787"/>
 </kw>
-<status status="FAIL" start="2025-04-28T15:28:00.460907" elapsed="26.676601">Element with locator 'xpath=//input[@name='username']' not found.</status>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-28T16:26:23.987090" level="INFO">Current page contains text 'Dashboard'.</msg>
+<arg>Dashboard</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-04-28T16:26:23.975689" elapsed="0.011810"/>
+</kw>
+<status status="PASS" start="2025-04-28T16:26:22.281274" elapsed="1.706426"/>
+</kw>
+<status status="PASS" start="2025-04-28T16:25:55.387119" elapsed="28.601217"/>
 </test>
-<test id="s1-s1-t2" name="invalid login" line="18">
+<test id="s1-s1-t2" name="invalid login" line="19">
 <kw name="Mo trinh duyet">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-28T15:28:27.140291" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<msg time="2025-04-28T16:26:23.992085" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-28T15:28:27.140015" elapsed="25.982736"/>
+<status status="PASS" start="2025-04-28T16:26:23.991709" elapsed="25.047435"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-28T15:28:53.123093" elapsed="0.043598"/>
-</kw>
-<status status="PASS" start="2025-04-28T15:28:27.139660" elapsed="26.027234"/>
+<status status="PASS" start="2025-04-28T16:26:23.991183" elapsed="25.048121"/>
 </kw>
 <kw name="truy cap URL">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-04-28T15:28:53.168076" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<msg time="2025-04-28T16:26:49.040329" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-04-28T15:28:53.167776" elapsed="0.529661"/>
+<status status="PASS" start="2025-04-28T16:26:49.040093" elapsed="0.407096"/>
 </kw>
-<status status="PASS" start="2025-04-28T15:28:53.167233" elapsed="0.530433"/>
+<status status="PASS" start="2025-04-28T16:26:49.039666" elapsed="0.407698"/>
 </kw>
-<kw name="Dang nhap">
+<kw name="Dang nhap sai">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@name='username']</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-28T16:26:49.448821" elapsed="1.236313"/>
+</kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T15:28:53.698988" level="INFO">Typing text 'Admin' into text field 'xpath=//input[@name='username']'.</msg>
-<msg time="2025-04-28T15:28:53.850023" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-04-28T15:28:53.850390" level="FAIL">Element with locator 'xpath=//input[@name='username']' not found.</msg>
-<arg>xpath=//input[@name='username']</arg>
-<arg>${name}</arg>
+<msg time="2025-04-28T16:26:50.686196" level="INFO">Typing text 'Admi' into text field 'xpath=//*[@name='username']'.</msg>
+<arg>xpath=//*[@name='username']</arg>
+<arg>${name1}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="FAIL" start="2025-04-28T15:28:53.698589" elapsed="0.154503">Element with locator 'xpath=//input[@name='username']' not found.</status>
+<status status="PASS" start="2025-04-28T16:26:50.685437" elapsed="0.142740"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<arg>xpath=//input[@name='password']</arg>
+<msg time="2025-04-28T16:26:50.829020" level="INFO">Typing text 'admin123' into text field 'xpath=//*[@name='password']'.</msg>
+<arg>xpath=//*[@name='password']</arg>
 <arg>${pass}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-04-28T15:28:53.853426" elapsed="0.000374"/>
+<status status="PASS" start="2025-04-28T16:26:50.828488" elapsed="0.088652"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<arg>class=oxd-button oxd-button--medium oxd-button--main orangehrm-login-button</arg>
+<msg time="2025-04-28T16:26:50.917815" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-04-28T15:28:53.854031" elapsed="0.000209"/>
+<status status="PASS" start="2025-04-28T16:26:50.917444" elapsed="0.047812"/>
 </kw>
-<status status="FAIL" start="2025-04-28T15:28:53.698067" elapsed="0.156368">Element with locator 'xpath=//input[@name='username']' not found.</status>
+<status status="PASS" start="2025-04-28T16:26:49.447748" elapsed="1.517779"/>
 </kw>
 <kw name="kiem tra dang nhap khong thanh cong">
-<status status="NOT RUN" start="2025-04-28T15:28:53.854835" elapsed="0.000196"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//p[@class='oxd-text oxd-text--p oxd-alert-content-text']</arg>
+<arg>timeout=20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-28T16:26:50.966656" elapsed="1.304752"/>
 </kw>
-<status status="FAIL" start="2025-04-28T15:28:27.138703" elapsed="26.716618">Element with locator 'xpath=//input[@name='username']' not found.</status>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-04-28T16:26:52.281903" level="INFO">Current page contains text 'Invalid credentials'.</msg>
+<arg>Invalid credentials</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-04-28T16:26:52.271599" elapsed="0.010576"/>
+</kw>
+<status status="PASS" start="2025-04-28T16:26:50.966135" elapsed="1.316169"/>
+</kw>
+<status status="PASS" start="2025-04-28T16:26:23.990116" elapsed="28.292493"/>
 </test>
 <doc>Day la mo ta</doc>
-<status status="FAIL" start="2025-04-28T15:28:00.213280" elapsed="53.643317"/>
+<status status="PASS" start="2025-04-28T16:25:55.140965" elapsed="57.142772"/>
 </suite>
-<status status="FAIL" start="2025-04-28T15:28:00.189737" elapsed="53.668187"/>
+<status status="PASS" start="2025-04-28T16:25:55.122177" elapsed="57.162953"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="2" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="BTC4" id="s1" pass="0" fail="2" skip="0">BTC4</stat>
-<stat name="Main" id="s1-s1" pass="0" fail="2" skip="0">BTC4.Main</stat>
+<stat name="BTC4" id="s1" pass="2" fail="0" skip="0">BTC4</stat>
+<stat name="Main" id="s1-s1" pass="2" fail="0" skip="0">BTC4.Main</stat>
 </suite>
 </statistics>
 <errors>
