@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-04-28T15:28:00.185841" rpa="false" schemaversion="5">
+<suite id="s1" name="BTC4" source="C:\BTVN\BTC4">
+<suite id="s1-s1" name="Main" source="C:\BTVN\BTC4\main.robot">
+<test id="s1-s1-t1" name="Vaild login" line="12">
+<kw name="Mo trinh duyet">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-28T15:28:00.463319" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-28T15:28:00.462957" elapsed="25.982628"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-28T15:28:26.445984" elapsed="0.091996"/>
+</kw>
+<status status="PASS" start="2025-04-28T15:28:00.461990" elapsed="26.076496"/>
+</kw>
+<kw name="truy cap URL">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-28T15:28:26.539945" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-28T15:28:26.539684" elapsed="0.450670"/>
+</kw>
+<status status="PASS" start="2025-04-28T15:28:26.539091" elapsed="0.451482"/>
+</kw>
+<kw name="Dang nhap">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-28T15:28:26.992029" level="INFO">Typing text 'Admin' into text field 'xpath=//input[@name='username']'.</msg>
+<msg time="2025-04-28T15:28:27.130858" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-28T15:28:27.131316" level="FAIL">Element with locator 'xpath=//input[@name='username']' not found.</msg>
+<arg>xpath=//input[@name='username']</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2025-04-28T15:28:26.991489" elapsed="0.143631">Element with locator 'xpath=//input[@name='username']' not found.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='password']</arg>
+<arg>${pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-04-28T15:28:27.135509" elapsed="0.000330"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>class=oxd-button oxd-button--medium oxd-button--main orangehrm-login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-04-28T15:28:27.136058" elapsed="0.000146"/>
+</kw>
+<status status="FAIL" start="2025-04-28T15:28:26.990943" elapsed="0.145447">Element with locator 'xpath=//input[@name='username']' not found.</status>
+</kw>
+<kw name="kiem tra dang nhap thanh cong">
+<status status="NOT RUN" start="2025-04-28T15:28:27.136805" elapsed="0.000232"/>
+</kw>
+<status status="FAIL" start="2025-04-28T15:28:00.460907" elapsed="26.676601">Element with locator 'xpath=//input[@name='username']' not found.</status>
+</test>
+<test id="s1-s1-t2" name="invalid login" line="18">
+<kw name="Mo trinh duyet">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-28T15:28:27.140291" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-28T15:28:27.140015" elapsed="25.982736"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-28T15:28:53.123093" elapsed="0.043598"/>
+</kw>
+<status status="PASS" start="2025-04-28T15:28:27.139660" elapsed="26.027234"/>
+</kw>
+<kw name="truy cap URL">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-28T15:28:53.168076" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-28T15:28:53.167776" elapsed="0.529661"/>
+</kw>
+<status status="PASS" start="2025-04-28T15:28:53.167233" elapsed="0.530433"/>
+</kw>
+<kw name="Dang nhap">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-28T15:28:53.698988" level="INFO">Typing text 'Admin' into text field 'xpath=//input[@name='username']'.</msg>
+<msg time="2025-04-28T15:28:53.850023" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-28T15:28:53.850390" level="FAIL">Element with locator 'xpath=//input[@name='username']' not found.</msg>
+<arg>xpath=//input[@name='username']</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2025-04-28T15:28:53.698589" elapsed="0.154503">Element with locator 'xpath=//input[@name='username']' not found.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='password']</arg>
+<arg>${pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-04-28T15:28:53.853426" elapsed="0.000374"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>class=oxd-button oxd-button--medium oxd-button--main orangehrm-login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-04-28T15:28:53.854031" elapsed="0.000209"/>
+</kw>
+<status status="FAIL" start="2025-04-28T15:28:53.698067" elapsed="0.156368">Element with locator 'xpath=//input[@name='username']' not found.</status>
+</kw>
+<kw name="kiem tra dang nhap khong thanh cong">
+<status status="NOT RUN" start="2025-04-28T15:28:53.854835" elapsed="0.000196"/>
+</kw>
+<status status="FAIL" start="2025-04-28T15:28:27.138703" elapsed="26.716618">Element with locator 'xpath=//input[@name='username']' not found.</status>
+</test>
+<doc>Day la mo ta</doc>
+<status status="FAIL" start="2025-04-28T15:28:00.213280" elapsed="53.643317"/>
+</suite>
+<status status="FAIL" start="2025-04-28T15:28:00.189737" elapsed="53.668187"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="BTC4" id="s1" pass="0" fail="2" skip="0">BTC4</stat>
+<stat name="Main" id="s1-s1" pass="0" fail="2" skip="0">BTC4.Main</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
